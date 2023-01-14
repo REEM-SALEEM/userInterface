@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:userinterface/screen1.dart';
+import 'package:userinterface/screen2.dart';
 import 'package:userinterface/screen3.dart';
 
 void main() {

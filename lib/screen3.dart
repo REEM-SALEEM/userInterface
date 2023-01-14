@@ -120,42 +120,10 @@ class _ScreenThreeState extends State<ScreenThree> {
       child: SafeArea(
         child: Scaffold(
             backgroundColor: Colors.white.withOpacity(0.7),
-            body: Column(children: [
-              Row(
-                children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Color.fromARGB(255, 213, 206, 197),
-                        Color.fromARGB(255, 187, 192, 216)
-                      ]),
-                    ),
-                    width: 390,
-                    height: 70,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            color: Colors.transparent,
-                            child: Image.asset('assets/prof.png'),
-                          ),
-                          const SizedBox(width: 5),
-                          const Icon(
-                            Icons.notifications,
-                            size: 40,
-                            color: Color.fromARGB(255, 53, 84, 186),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: Row(
+            body: SingleChildScrollView(
+              physics: ScrollPhysics(),
+              child: Column(children: [
+                Row(
                   children: [
                     Container(
                       decoration: const BoxDecoration(
@@ -164,171 +132,204 @@ class _ScreenThreeState extends State<ScreenThree> {
                           Color.fromARGB(255, 187, 192, 216)
                         ]),
                       ),
-                      width: 200,
+                      width: 390,
                       height: 70,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Row(
-                          children: const [
-                            Icon(
-                              Icons.file_copy_outlined,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              color: Colors.transparent,
+                              child: Image.asset('assets/prof.png'),
+                            ),
+                            const SizedBox(width: 5),
+                            const Icon(
+                              Icons.notifications,
+                              size: 40,
                               color: Color.fromARGB(255, 53, 84, 186),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              'Invoices',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 53, 84, 186),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 192,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
-                        child: Row(
-                          children: const [
-                            Icon(
-                              Icons.wallet,
-                              color: Color.fromARGB(255, 53, 84, 186),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              'Wallet',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 53, 84, 186),
-                              ),
-                            ),
+                            )
                           ],
                         ),
                       ),
                     ),
                   ],
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
-                child: Stack(children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Color.fromARGB(255, 213, 206, 197),
-                        Color.fromARGB(255, 187, 192, 216)
-                      ]),
-                    ),
-                    width: 420,
-                    height: 210,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(100, 20, 0, 0),
-                    child: Container(
-                      width: 200,
-                      height: 110,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        gradient: const LinearGradient(colors: [
-                          Color.fromARGB(255, 32, 69, 162),
-                          Color.fromARGB(255, 91, 111, 196)
-                        ]),
-                      ),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 20),
-                          const Text(
-                            'Total Balance',
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),
-                            child: Row(
-                              children: [
-                                const Text(
-                                  '14,325 ',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 30),
-                                ),
-                                Image.asset('assets/coin7.png')
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(140, 145, 0, 0),
-                    child: Container(
-                      width: 120,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 1,
-                              blurRadius: 7,
-                              offset: const Offset(0, 2),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
-                          Icon(
-                            Icons.add,
-                            color: Color.fromARGB(255, 53, 84, 186),
-                          ),
-                          Text(
-                            'Add Points ',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 53, 84, 186),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ]),
-              ),
-              SizedBox(
-                height: 70,
-                width: 400,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(130, 0, 0, 0),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
-                    children: const [
-                      Icon(
-                        Icons.receipt_long,
-                        color: Color.fromARGB(255, 53, 84, 186),
+                    children: [
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(colors: [
+                            Color.fromARGB(255, 213, 206, 197),
+                            Color.fromARGB(255, 187, 192, 216)
+                          ]),
+                        ),
+                        width: 200,
+                        height: 70,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                          child: Row(
+                            children: const [
+                              Icon(
+                                Icons.file_copy_outlined,
+                                color: Color.fromARGB(255, 53, 84, 186),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'Invoices',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 53, 84, 186),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       SizedBox(
-                        width: 6,
-                      ),
-                      Text(
-                        'Transactions',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 53, 84, 186),
-                            fontSize: 20),
+                        width: 192,
+                        height: 70,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                          child: Row(
+                            children: const [
+                              Icon(
+                                Icons.wallet,
+                                color: Color.fromARGB(255, 53, 84, 186),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'Wallet',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 53, 84, 186),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
+                  child: Stack(children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          Color.fromARGB(255, 242, 224, 201),
+                          Color.fromARGB(255, 187, 192, 216)
+                        ]),
+                      ),
+                      width: 420,
+                      height: 210,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 20, 0, 0),
+                      child: Container(
+                        width: 200,
+                        height: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          gradient: const LinearGradient(colors: [
+                            Color.fromARGB(255, 32, 69, 162),
+                            Color.fromARGB(255, 91, 111, 196)
+                          ]),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 20),
+                            const Text(
+                              'Total Balance',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),
+                              child: Row(
+                                children: [
+                                  const Text(
+                                    '14,325 ',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 30),
+                                  ),
+                                  Image.asset('assets/coin7.png')
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(140, 145, 0, 0),
+                      child: Container(
+                        width: 120,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 1,
+                                blurRadius: 7,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Icon(
+                              Icons.add,
+                              color: Color.fromARGB(255, 53, 84, 186),
+                            ),
+                            Text(
+                              'Add Points ',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 53, 84, 186),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ]),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 400,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(130, 0, 0, 0),
+                    child: Row(
+                      children: const [
+                        Icon(
+                          Icons.receipt_long,
+                          color: Color.fromARGB(255, 53, 84, 186),
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          'Transactions',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 53, 84, 186),
+                              fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
                   decoration: const BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
@@ -341,6 +342,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                         Color.fromARGB(255, 162, 201, 233)
                       ])),
                   child: ListView.separated(
+                    physics: const ScrollPhysics(),shrinkWrap: true,
                       itemBuilder: (context, index) => Padding(
                             padding: const EdgeInsets.fromLTRB(10, 10, 10, 5),
                             child: Container(
@@ -383,9 +385,9 @@ class _ScreenThreeState extends State<ScreenThree> {
                           ),
                       separatorBuilder: (context, index) => const SizedBox(),
                       itemCount: 7),
-                ),
-              )
-            ])),
+                )
+              ]),
+            )),
       ),
     );
   }
